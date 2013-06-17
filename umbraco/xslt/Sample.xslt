@@ -28,7 +28,7 @@
 	<!-- Root template (called automatically) -->
 	<xsl:template match="/">
 		<!-- Process the current page -->
-		<xsl:apply-templates select="" />
+		<xsl:apply-templates select="$currentPage" />
 	</xsl:template>
 
 	<!-- Sample Document Type specific template  -->
