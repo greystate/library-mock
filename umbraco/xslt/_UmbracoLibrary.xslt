@@ -19,7 +19,8 @@
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 	xmlns:func="http://exslt.org/functions"
 	xmlns:umb="urn:umbraco.library"
-	exclude-result-prefixes="func umb"
+	xmlns:dates="http://exslt.org/dates-and-times"
+	exclude-result-prefixes="func umb dates"
 	extension-element-prefixes="func"
 >
 	<!-- ===========================================================
@@ -55,7 +56,7 @@
 		<!-- Return the node or a dummy for the error that would otherwise happen -->
 		<func:result select="($mediaNodes//*[@id = number($mediaId)] | $mediaNodes//*[@id = 'NaN'])[1]" />
 	</func:function>
-	
+
 	<!-- ===========================================================
 	Mock for FormatDateTime(date, format)
 	============================================================ -->
@@ -72,6 +73,13 @@
 
 		<!-- Assemble a return value -->
 		<func:result select="concat($year, '-', $month, '-', $date)" />
+	</func:function>
+	
+	<!-- ===========================================================
+	Mock for CurrentDate() 
+	============================================================ -->
+	<func:function name="umb:CurrentDate">
+		<func:result select="substring(dates:date-time(), 1, 19)" />
 	</func:function>
 
 </xsl:stylesheet>

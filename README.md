@@ -20,6 +20,7 @@ just makes sure to return something that [looks like a duck][DUCK].
 * GetXmlNodeById()
 * GetMedia()
 * FormatDateTime()
+* CurrentDate()
 
 <!-- end tminclude -->
 
