@@ -12,10 +12,16 @@ just makes sure to return something that [looks like a duck][DUCK].
 
 ## Extensions currently being mocked
 
-* `NiceUrl()`
-* `GetXmlNodeById()`
-* `GetMedia()`
-* `FormatDateTime()`
+<!-- #tminclude "/Users/chriz/Development/lib/tm-support/transform.rb"
+    #xml#="umbraco/xslt/_UmbracoLibrary.xslt"
+    #xslt#="lib/MocksList.xslt" -->
+
+* NiceUrl()
+* GetXmlNodeById()
+* GetMedia()
+* FormatDateTime()
+
+<!-- end tminclude -->
 
 Here is the [reference for the original functions][REF] on **Our Umbraco.**
 
