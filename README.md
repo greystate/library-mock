@@ -16,13 +16,17 @@ just makes sure to return something that [looks like a duck][DUCK].
     #xml#="umbraco/xslt/_UmbracoLibrary.xslt"
     #xslt#="lib/MocksList.xslt" -->
 
-* NiceUrl()
-* GetXmlNodeById()
-* GetMedia()
-* FormatDateTime()
-* CurrentDate()
+- [x] NiceUrl()
+- [x] GetXmlNodeById()
+- [x] GetMedia()
+- [x] FormatDateTime()
+- [x] CurrentDate()
+- [ ] Split()
+- [ ] Replace()
 
 <!-- end tminclude -->
+
+(Unchecked items are extensions that have an empty stub in the file, but no real implementation yet.)
 
 Here is the [reference for the original functions][REF] on **Our Umbraco.**
 

@@ -19,9 +19,11 @@
 		<xsl:text>&newline;</xsl:text>
 	</xsl:template>
 	
+	<!-- Show implemented functions as completed tasks -->
 	<xsl:template match="func:function">
-		<xsl:value-of select="concat('* ', substring-after(@name, 'umb:'), '()')" />
+		<xsl:variable name="completed" select="substring('x| ', not(func:result) * 2 + 1, 1)" />
+		<xsl:value-of select="concat('- [', $completed, '] ', substring-after(@name, 'umb:'), '()')" />
 		<xsl:text>&newline;</xsl:text>
 	</xsl:template>
-
+	
 </xsl:stylesheet>
