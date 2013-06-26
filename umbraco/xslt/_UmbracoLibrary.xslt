@@ -81,5 +81,15 @@
 	<func:function name="umb:CurrentDate">
 		<func:result select="substring(dates:date-time(), 1, 19)" />
 	</func:function>
+	
+	<!-- ===========================================================
+	Stub for Split() 
+	============================================================ -->
+	<func:function name="umb:Split" />
+
+	<!-- ===========================================================
+	Stub for Replace(text, oldValue, newValue) 
+	============================================================ -->
+	<func:function name="umb:Replace" />
 
 </xsl:stylesheet>
