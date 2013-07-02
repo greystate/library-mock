@@ -21,7 +21,7 @@ just makes sure to return something that [looks like a duck][DUCK].
 - [x] GetMedia()
 - [x] FormatDateTime()
 - [x] CurrentDate()
-- [ ] Split()
+- [x] Split()
 - [ ] Replace()
 
 <!-- end tminclude -->

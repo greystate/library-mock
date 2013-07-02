@@ -20,7 +20,9 @@
 	xmlns:func="http://exslt.org/functions"
 	xmlns:umb="urn:umbraco.library"
 	xmlns:dates="http://exslt.org/dates-and-times"
-	exclude-result-prefixes="func umb dates"
+	xmlns:str="http://exslt.org/strings"
+	xmlns:make="http://exslt.org/common"
+	exclude-result-prefixes="func umb dates make"
 	extension-element-prefixes="func"
 >
 	<!-- ===========================================================
@@ -83,9 +85,19 @@
 	</func:function>
 	
 	<!-- ===========================================================
-	Stub for Split() 
+	Mock for Split(text, character) 
 	============================================================ -->
-	<func:function name="umb:Split" />
+	<func:function name="umb:Split">
+		<xsl:param name="text" />
+		<xsl:param name="character" />
+		<xsl:variable name="values" select="str:tokenize($text, $character)" />
+		<xsl:variable name="result">
+			<xsl:for-each select="$values">
+				<value><xsl:value-of select="." /></value>
+			</xsl:for-each>
+		</xsl:variable>
+		<func:result select="make:node-set($result)" />
+	</func:function>
 
 	<!-- ===========================================================
 	Stub for Replace(text, oldValue, newValue) 
