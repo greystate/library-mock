@@ -27,8 +27,11 @@
 	
 	<!-- Root template (called automatically) -->
 	<xsl:template match="/">
-		<!-- Process the current page -->
+		<!-- Run the misc. samples -->
+
+		<xsl:call-template name="CurrentDateSample" />
 		<xsl:call-template name="SplitSample" /> 
+		
 	</xsl:template>
 
 	<xsl:template name="SplitSample">
@@ -37,14 +40,25 @@
 				<xsl:with-param name="function" select="'Split'" />
 			</xsl:call-template>
 			<xsl:for-each select="umb:Split('a,b,c,d,e,f', ',')/value">
-				<p><xsl:value-of select="." /></p>
+				<xsl:variable name="color" select="position() * 40" />
+				<span style="color:rgb({$color}, {round($color div 2)}, {$color})"><xsl:value-of select="." /></span>
 			</xsl:for-each>
+		</section>
+	</xsl:template>
+	
+	<xsl:template name="CurrentDateSample">
+		<section class="sample">
+			<xsl:call-template name="SampleHeader">
+				<xsl:with-param name="function" select="'CurrentDate'" />
+			</xsl:call-template>
+			
+			<p>Now: <xsl:value-of select="umb:CurrentDate()" /></p>
 		</section>
 	</xsl:template>
 	
 	<xsl:template name="SampleHeader">
 		<xsl:param name="function" />
-		<h1><xsl:value-of select="$function" /></h1>
+		<h1><xsl:value-of select="concat('umb:', $function, '()')" /></h1>
 	</xsl:template>
 	
 </xsl:stylesheet>
