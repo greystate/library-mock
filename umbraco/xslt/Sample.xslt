@@ -28,7 +28,7 @@
 	<!-- Root template (called automatically) -->
 	<xsl:template match="/">
 		<!-- Process the current page -->
-		<xsl:apply-templates select="$currentPage" />
+		<xsl:call-template name="SplitSample" /> 
 	</xsl:template>
 
 	<!-- Sample Document Type specific template  -->
@@ -41,6 +41,12 @@
 	<!-- Generic template for any document node -->
 	<xsl:template match="*[@isDoc]" priority="-1">
 		
+	</xsl:template>
+	
+	<xsl:template name="SplitSample">
+		<xsl:for-each select="umb:Split('a,b,c,d,e,f', ',')/value">
+			<p><xsl:value-of select="." /></p>
+		</xsl:for-each>
 	</xsl:template>
 	
 </xsl:stylesheet>
