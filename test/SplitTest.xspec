@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<x:description
+	stylesheet="../umbraco/xslt/_UmbracoLibrary.xslt"
+	xslt-version="1.0"
+	xmlns:x="http://www.jenitennison.com/xslt/xspec"
+	xmlns:umb="urn:umbraco.library"
+>
+	<x:scenario label="when calling Split with a split character that's not in the 1st argument string">
+		<x:call function="umb:Split">
+			<x:param name="string" select="'No splitting here'" />
+			<x:param name="character" select="'*'" />
+		</x:call>
+		<x:expect label="it should return the argument untouched">
+			<output>No splitting here</output>
+		</x:expect>
+	</x:scenario>
+
+</x:description>
