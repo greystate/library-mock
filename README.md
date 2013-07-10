@@ -35,7 +35,7 @@ library function, or just makes sure to return something that [looks like a duck
     #xml#="umbraco/xslt/_uComponentsExtensions.xslt"
     #xslt#="lib/MocksList.xslt" -->
 
-- [ ] `RandomChildNode()` (xml)
+- [x] `RandomChildNode()` (xml)
 
 <!-- end tminclude -->
 
