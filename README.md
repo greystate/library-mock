@@ -26,6 +26,8 @@ library function, or just makes sure to return something that [looks like a duck
 - [x] `CurrentDate()`
 - [x] `Split()`
 - [ ] `Replace()`
+- [ ] `RequestQueryString()`
+- [ ] `DateGreaterThanOrEqualToday()`
 
 <!-- end tminclude -->
 

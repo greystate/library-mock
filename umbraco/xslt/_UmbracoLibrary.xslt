@@ -103,5 +103,19 @@
 	Stub for Replace(text, oldValue, newValue) 
 	============================================================ -->
 	<func:function name="umb:Replace" />
+	
+	<!-- ===========================================================
+	Stub for RequestQueryString()
+	============================================================ -->
+	<func:function name="umb:RequestQueryString">
+		<xsl:param name="key" />
+	</func:function>
+	
+	<!-- ===========================================================
+	Stub for DateGreaterThanOrEqualToday()
+	============================================================ -->
+	<func:function name="umb:DateGreaterThanOrEqualToday">
+		<xsl:param name="date" />
+	</func:function>
 
 </xsl:stylesheet>
