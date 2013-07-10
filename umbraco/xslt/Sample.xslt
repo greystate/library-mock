@@ -2,8 +2,11 @@
 <!--
 	## Sample.xslt
 	
-	Sample of an XSLT macro using the `_UmbracoLibrary.xslt` file for
-	mocking the extensions when developing locally on OS X.
+	Samples of using the `_UmbracoLibrary.xslt` file for
+	mocking various extensions when developing locally on OS X.
+	
+	Serves as a simple test file - just run it using itself as the XML data,
+	to see if everything works.
 -->
 <!DOCTYPE xsl:stylesheet [
 	<!ENTITY % entities SYSTEM "entities.ent">
