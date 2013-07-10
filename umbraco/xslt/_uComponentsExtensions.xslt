@@ -29,7 +29,6 @@
 	<func:function name="ucom.xml:RandomChildNode">
 		<xsl:param name="node" />
 		<xsl:variable name="childNodes" select="$node/*[@isDoc]" />
-		<xsl:message><xsl:value-of select="math:random()" /></xsl:message>
 		<xsl:variable name="count" select="count($childNodes)" />
 		<xsl:variable name="randomChild" select="$childNodes[position() = floor(math:random() * $count) + 1]" />
 		<func:result select="$randomChild" />
