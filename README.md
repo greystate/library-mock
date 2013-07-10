@@ -43,7 +43,9 @@ library function, or just makes sure to return something that [looks like a duck
 
 (Unchecked items are extensions that have an empty stub in the file, but no real implementation yet.)
 
-Here is the [reference for the original functions][REF] on **Our Umbraco.**
+Here is the [reference for the umbraco.library functions][REF] on **Our Umbraco.**
+
+Here is the [reference for the uComponents Extensions][UCOMREF] on **ucomponents.org**
 
 ## Would this be useful as a submodule?
 
@@ -59,3 +61,4 @@ sure to write some instructions here:
 [DUCK]: http://en.wikipedia.org/wiki/Duck_test
 [SUBMODULE]: http://git-scm.com/book/en/Git-Tools-Submodules
 [REF]: http://our.umbraco.org/wiki/reference/umbracolibrary/
+[UCOMREF]: http://ucomponents.org/xslt-extensions/
