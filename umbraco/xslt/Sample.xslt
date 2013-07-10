@@ -16,7 +16,9 @@
 	version="1.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 	xmlns:umb="urn:umbraco.library"
-	exclude-result-prefixes="umb"
+	xmlns:make="http://exslt.org/common"
+	xmlns:ucom.xml="urn:ucomponents.xml"
+	exclude-result-prefixes="umb make ucom.xml"
 >
 	&compatibility;
 	
@@ -31,9 +33,13 @@
 	<!-- Root template (called automatically) -->
 	<xsl:template match="/">
 		<!-- Run the misc. samples -->
-
+		
+		<h2>umbraco.library Samples</h2>
 		<xsl:call-template name="CurrentDateSample" />
 		<xsl:call-template name="SplitSample" /> 
+		
+		<h2>uComponents Samples</h2>
+		<xsl:call-template name="RandomChildNodeSample" />
 		
 	</xsl:template>
 
@@ -56,6 +62,33 @@
 			</xsl:call-template>
 			
 			<p>Now: <xsl:value-of select="umb:CurrentDate()" /></p>
+		</section>
+	</xsl:template>
+	
+	<xsl:template name="RandomChildNodeSample">
+		<xsl:variable name="nodesProxy">
+			<Website isDoc="">
+				<Textpage id="1" isDoc=""></Textpage>
+				<Textpage id="2" isDoc=""></Textpage>
+				<Textpage id="3" isDoc=""></Textpage>
+				<Textpage id="4" isDoc=""></Textpage>
+				<Textpage id="5" isDoc=""></Textpage>
+				<Textpage id="6" isDoc=""></Textpage>
+			</Website>
+		</xsl:variable>
+		<xsl:variable name="parent" select="make:node-set($nodesProxy)/Website" />
+		
+		<section class="sample">
+			<xsl:call-template name="SampleHeader">
+				<xsl:with-param name="function" select="'RandomChildNode'" />
+			</xsl:call-template>
+			
+			<p>
+				Here's the id of a “random” child element from a set of 6 nodes:
+				<code><xsl:value-of select="ucom.xml:RandomChildNode($parent)/@id" /></code>
+			</p>
+			
+			
 		</section>
 	</xsl:template>
 	
