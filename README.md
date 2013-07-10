@@ -16,13 +16,13 @@ just makes sure to return something that [looks like a duck][DUCK].
     #xml#="umbraco/xslt/_UmbracoLibrary.xslt"
     #xslt#="lib/MocksList.xslt" -->
 
-- [x] NiceUrl()
-- [x] GetXmlNodeById()
-- [x] GetMedia()
-- [x] FormatDateTime()
-- [x] CurrentDate()
-- [x] Split()
-- [ ] Replace()
+- [x] `NiceUrl()`
+- [x] `GetXmlNodeById()`
+- [x] `GetMedia()`
+- [x] `FormatDateTime()`
+- [x] `CurrentDate()`
+- [x] `Split()`
+- [ ] `Replace()`
 
 <!-- end tminclude -->
 

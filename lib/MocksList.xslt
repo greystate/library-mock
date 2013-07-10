@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE xsl:stylesheet [
 	<!ENTITY newline "&#10;">
+	<!ENTITY tick "`">
 ]>
 <xsl:stylesheet
 	version="1.0"
@@ -22,7 +23,7 @@
 	<!-- Show implemented functions as completed tasks -->
 	<xsl:template match="func:function">
 		<xsl:variable name="completed" select="substring('x| ', not(func:result) * 2 + 1, 1)" />
-		<xsl:value-of select="concat('- [', $completed, '] ', substring-after(@name, 'umb:'), '()')" />
+		<xsl:value-of select="concat('- [', $completed, '] &tick;', substring-after(@name, 'umb:'), '()&tick;')" />
 		<xsl:text>&newline;</xsl:text>
 	</xsl:template>
 	
