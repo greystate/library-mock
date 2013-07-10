@@ -116,6 +116,8 @@
 	============================================================ -->
 	<func:function name="umb:DateGreaterThanOrEqualToday">
 		<xsl:param name="date" />
+		<xsl:variable name="today" select="umb:CurrentDate()" />
+		<func:result select="dates:seconds(dates:difference($today, $date)) &gt;= 0" />
 	</func:function>
 
 </xsl:stylesheet>

@@ -36,6 +36,7 @@
 		
 		<h2>umbraco.library Samples</h2>
 		<xsl:call-template name="CurrentDateSample" />
+		<xsl:call-template name="DateGreaterThanOrEqualTodaySample" />
 		<xsl:call-template name="SplitSample" /> 
 		
 		<h2>uComponents Samples</h2>
@@ -87,8 +88,18 @@
 				Here's the id of a “random” child element from a set of 6 nodes:
 				<code><xsl:value-of select="ucom.xml:RandomChildNode($parent)/@id" /></code>
 			</p>
+		</section>
+	</xsl:template>
+
+	<xsl:template name="DateGreaterThanOrEqualTodaySample">
+		<section class="sample">
+			<xsl:call-template name="SampleHeader">
+				<xsl:with-param name="function" select="'DateGreaterThanOrEqualToday'" />
+			</xsl:call-template>
 			
-			
+			<p>Is my birthday (1970-12-28) greater than today? — <strong><xsl:value-of select="umb:DateGreaterThanOrEqualToday('1970-12-28')" /></strong></p>
+			<p>Is today greater than (or equal to) today? - <strong><xsl:value-of select="umb:DateGreaterThanOrEqualToday(umb:CurrentDate())" /></strong></p>
+			<p>Is my 80th birthday greater than today? — <strong><xsl:value-of select="umb:DateGreaterThanOrEqualToday('2050-12-28')" /></strong></p>
 		</section>
 	</xsl:template>
 	
