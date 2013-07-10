@@ -23,7 +23,12 @@
 	<!-- Show implemented functions as completed tasks -->
 	<xsl:template match="func:function">
 		<xsl:variable name="completed" select="substring('x| ', not(func:result) * 2 + 1, 1)" />
-		<xsl:value-of select="concat('- [', $completed, '] &tick;', substring-after(@name, 'umb:'), '()&tick;')" />
+		<xsl:variable name="extension" select="substring-after(@name, ':')" />
+		<xsl:variable name="ucomNS" select="substring-before(substring-after(@name, 'ucom.'), ':')" />
+		<xsl:value-of select="concat('- [', $completed, '] &tick;', $extension, '()&tick;')" />
+		<xsl:if test="$ucomNS">
+			<xsl:value-of select="concat(' (', $ucomNS, ')')" />
+		</xsl:if>
 		<xsl:text>&newline;</xsl:text>
 	</xsl:template>
 	
