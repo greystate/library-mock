@@ -112,7 +112,7 @@
 	</func:function>
 	
 	<!-- ===========================================================
-	Stub for DateGreaterThanOrEqualToday()
+	Mock for DateGreaterThanOrEqualToday()
 	============================================================ -->
 	<func:function name="umb:DateGreaterThanOrEqualToday">
 		<xsl:param name="date" />
