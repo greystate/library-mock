@@ -112,6 +112,20 @@
 	</func:function>
 	
 	<!-- ===========================================================
+	Stub for IsLoggedOn()
+	============================================================ -->
+	<func:function name="umb:IsLoggedOn">
+	</func:function>
+	
+	<!-- ===========================================================
+	Stub for HasAccess(nodeId, nodePath)
+	============================================================ -->
+	<func:function name="umb:HasAccess">
+		<xsl:param name="nodeId" />
+		<xsl:param name="nodePath" />
+	</func:function>
+	
+	<!-- ===========================================================
 	Mock for DateGreaterThanOrEqualToday()
 	============================================================ -->
 	<func:function name="umb:DateGreaterThanOrEqualToday">

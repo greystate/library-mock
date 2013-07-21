@@ -27,6 +27,8 @@ library function, or just makes sure to return something that [looks like a duck
 - [x] `Split()`
 - [ ] `Replace()`
 - [ ] `RequestQueryString()`
+- [ ] `IsLoggedOn()`
+- [ ] `HasAccess()`
 - [x] `DateGreaterThanOrEqualToday()`
 - [x] `DateGreaterThanOrEqual()`
 
