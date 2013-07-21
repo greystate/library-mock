@@ -111,6 +111,7 @@
 			</xsl:call-template>
 			
 			<p>Is my birthday (1970-12-28) greater than January 1st the year after? — <strong><xsl:value-of select="umb:DateGreaterThanOrEqual('1970-12-28', '1971-01-01')" /></strong></p>
+			<p>Is May 4th, 1977 greater than (or equal to) May 4th 1977? <strong><xsl:value-of select="umb:DateGreaterThanOrEqual('1977-05-04', '1977-05-04')" /></strong></p>
 			<p>Is July 1st 2013 greater than July 1st 2012? - <strong><xsl:value-of select="umb:DateGreaterThanOrEqual('2013-07-01', '2012-07-01')" /></strong></p>
 		</section>
 	</xsl:template>
