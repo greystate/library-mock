@@ -28,6 +28,7 @@ library function, or just makes sure to return something that [looks like a duck
 - [ ] `Replace()`
 - [ ] `RequestQueryString()`
 - [x] `DateGreaterThanOrEqualToday()`
+- [x] `DateGreaterThanOrEqual()`
 
 <!-- end tminclude -->
 
