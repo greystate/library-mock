@@ -34,7 +34,7 @@ library function, or just makes sure to return something that [looks like a duck
 
 <!-- end tminclude -->
 
-### From *ucomponents.\**
+### From _ucomponents.*_
 
 <!-- #tminclude "/Users/chriz/Development/lib/tm-support/transform.rb"
     #xml#="umbraco/xslt/_uComponentsExtensions.xslt"
