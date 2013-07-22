@@ -25,7 +25,7 @@
 <!-- :: Extensions in urn:ucomponents.xml :: -->
 
 	<!-- ===========================================================
-	Mock for RandomChildNode()
+	Mock for RandomChildNode(node)
 	============================================================ -->
 	<func:function name="ucom.xml:RandomChildNode">
 		<xsl:param name="node" />
@@ -38,10 +38,10 @@
 <!-- :: Extensions in urn:ucomponents.random :: -->
 
 	<!-- ===========================================================
-	Stub for GetRandomNumbersAsXml()
+	Stub for GetRandomNumbersAsXml(count)
 	============================================================ -->
 	<func:function name="ucom.random:GetRandomNumbersAsXml">
-		<xsl:param name="argument" />
+		<xsl:param name="count" />
 		
 	</func:function>
 
