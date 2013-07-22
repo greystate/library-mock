@@ -17,7 +17,8 @@
 	xmlns:make="http://exslt.org/common"
 	xmlns:math="http://exslt.org/math"
 	xmlns:ucom.xml="urn:ucomponents.xml"
-	exclude-result-prefixes="func dates make math ucom.xml"
+	xmlns:ucom.random="urn:ucomponents.random"
+	exclude-result-prefixes="func dates make math ucom.xml ucom.random"
 	extension-element-prefixes="func"
 >
 
@@ -32,6 +33,16 @@
 		<xsl:variable name="count" select="count($childNodes)" />
 		<xsl:variable name="randomChild" select="$childNodes[position() = floor(math:random() * $count) + 1]" />
 		<func:result select="$randomChild" />
+	</func:function>
+
+<!-- :: Extensions in urn:ucomponents.random :: -->
+
+	<!-- ===========================================================
+	Stub for GetRandomNumbersAsXml()
+	============================================================ -->
+	<func:function name="ucom.random:GetRandomNumbersAsXml">
+		<xsl:param name="argument" />
+		
 	</func:function>
 
 </xsl:stylesheet>
