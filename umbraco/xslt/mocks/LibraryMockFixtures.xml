@@ -1,28 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-	Sample media fixture for use with the GetMedia() extension.
--->
-<root>
-	<Image id="1667" nodeName="Profile Image">
-		<umbracoFile>http://placekitten.com/400/300</umbracoFile>
-		<umbracoWidth>400</umbracoWidth>
-		<umbracoHeight>300</umbracoHeight>
-		<umbracoExtension>jpg</umbracoExtension>
-	</Image>
+<fixtures>
+	<fixture name="Media">
+		<!--
+			Sample media fixture for use with the GetMedia() extension.
+		-->
+		<Image id="1667" nodeName="Profile Image">
+			<umbracoFile>http://placekitten.com/400/300</umbracoFile>
+			<umbracoWidth>400</umbracoWidth>
+			<umbracoHeight>300</umbracoHeight>
+			<umbracoExtension>jpg</umbracoExtension>
+		</Image>
+
+		<Folder id="1777" nodeName="PDF files">
+			<contents />
 	
-	<Folder id="1777" nodeName="PDF files">
-		<contents />
-		
-		<File id="2021" nodeName="Specs">
-			<umbracoFile>/specification.pdf</umbracoFile>
-			<umbracoBytes>16384</umbracoBytes>
-			<umbracoExtension>pdf</umbracoExtension>
-		</File>
-	</Folder>
-	
-	
-	<!-- Keep this as the last item -->
-	<NonExisitingNode id="NaN">
-		<error>No media exist with that id</error>
-	</NonExisitingNode>
-</root>
+			<File id="2021" nodeName="Specs">
+				<umbracoFile>/specification.pdf</umbracoFile>
+				<umbracoBytes>16384</umbracoBytes>
+				<umbracoExtension>pdf</umbracoExtension>
+			</File>
+		</Folder>
+
+		<!-- Keep this as the last item -->
+		<NonExisitingNode id="NaN">
+			<error>No media exist with that id</error>
+		</NonExisitingNode>
+	</fixture>
+</fixtures>
