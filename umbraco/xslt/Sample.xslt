@@ -39,6 +39,7 @@
 		<xsl:call-template name="DateGreaterThanOrEqualTodaySample" />
 		<xsl:call-template name="DateGreaterThanOrEqualSample" />
 		<xsl:call-template name="SplitSample" /> 
+		<xsl:call-template name="GetMediaSample" />
 		
 		<h2>uComponents Samples</h2>
 		<xsl:call-template name="RandomChildNodeSample" />
@@ -55,6 +56,15 @@
 				<span style="color:rgb({$color}, {round($color div 2)}, {$color})"><xsl:value-of select="." /></span>
 			</xsl:for-each>
 		</section>
+	</xsl:template>
+	
+	<xsl:template name="GetMediaSample">
+		<xsl:call-template name="SampleHeader">
+			<xsl:with-param name="function" select="'GetMedia'" />
+		</xsl:call-template>
+
+		<xsl:variable name="media" select="umb:GetMedia(1667, false())" />
+		<img src="{$media/umbracoFile}" width="{$media/umbracoWidth}" />
 	</xsl:template>
 	
 	<xsl:template name="CurrentDateSample">
