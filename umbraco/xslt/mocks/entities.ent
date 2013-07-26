@@ -9,5 +9,5 @@
 ]]>
 
 <![ %use.in.textmate; [
-	<!ENTITY compatibility '<xsl:import href="_UmbracoLibrary.xslt" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" /><xsl:import href="_uComponentsExtensions.xslt" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" />'>
+	<!ENTITY compatibility '<xsl:import href="mocks/_UmbracoLibrary.xslt" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" /><xsl:import href="mocks/_uComponentsExtensions.xslt" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" />'>
 ]]>

@@ -9,7 +9,7 @@
 	to see if everything works.
 -->
 <!DOCTYPE xsl:stylesheet [
-	<!ENTITY % entities SYSTEM "entities.ent">
+	<!ENTITY % entities SYSTEM "mocks/entities.ent">
 	%entities;
 ]>
 <xsl:stylesheet
