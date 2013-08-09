@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+	# LibraryMockFixtures.xml
+	
+	These fixtures are used by the various extension mocks so you can easily
+	fake a specific state, e.g. the `HasAccess()` and `IsLoggedIn()` methods
+	simply return whatever you specify here, which makes it easy to set up
+	from project to project, if you need it.
+	
+	Media files are also fetched from here so you can use the right images
+	and not rely on kittens every time :-)
+	
+-->
 <fixtures>
 	<fixture name="Media">
 		<!--
+			## Media
+			
 			Sample media fixture for use with the GetMedia() extension.
 		-->
 		<Image id="1667" nodeName="Profile Image">
