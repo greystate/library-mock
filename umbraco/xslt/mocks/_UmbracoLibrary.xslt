@@ -108,16 +108,29 @@
 	<func:function name="umb:Replace" />
 	
 	<!-- ===========================================================
-	Stub for RequestQueryString()
+	Mock for RequestQueryString()
 	============================================================ -->
 	<func:function name="umb:RequestQueryString">
 		<xsl:param name="key" />
+		<xsl:variable name="fixture" select="$fixtures[@name = 'QueryString']" />
+		<func:result select="$fixture/item[@key = $key]" />
 	</func:function>
 	
 	<!-- ===========================================================
-	Stub for IsLoggedOn()
+	Mock for RequestServerVariables()
+	============================================================ -->
+	<func:function name="umb:RequestServerVariables">
+		<xsl:param name="key" />
+		<xsl:variable name="fixture" select="$fixtures[@name = 'ServerVariables']" />
+		<func:result select="$fixture/item[@key = $key]" />
+	</func:function>
+	
+	<!-- ===========================================================
+	Mock for IsLoggedOn()
 	============================================================ -->
 	<func:function name="umb:IsLoggedOn">
+		<xsl:variable name="fixture" select="$fixtures[@name = 'Access']" />
+		<func:result select="boolean($fixture/isLoggedOn = 'true')" />
 	</func:function>
 	
 	<!-- ===========================================================
