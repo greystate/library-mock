@@ -25,6 +25,9 @@
 	exclude-result-prefixes="func umb dates make"
 	extension-element-prefixes="func"
 >
+
+	<xsl:variable name="fixtures" select="document('LibraryMockFixtures.xml')/fixtures/fixture" />
+
 	<!-- ===========================================================
 	Mock for NiceUrl(nodeId)
 	============================================================ -->
@@ -53,7 +56,7 @@
 		<xsl:param name="mediaId" />
 		<xsl:param name="deep" />
 
-		<xsl:variable name="mediaNodes" select="document('../app/models/_media-fixture.xml')" />
+		<xsl:variable name="mediaNodes" select="$fixtures[@name = 'Media']" />
 		
 		<!-- Return the node or a dummy for the error that would otherwise happen -->
 		<func:result select="($mediaNodes//*[@id = number($mediaId)] | $mediaNodes//*[@id = 'NaN'])[1]" />
@@ -105,16 +108,29 @@
 	<func:function name="umb:Replace" />
 	
 	<!-- ===========================================================
-	Stub for RequestQueryString()
+	Mock for RequestQueryString()
 	============================================================ -->
 	<func:function name="umb:RequestQueryString">
 		<xsl:param name="key" />
+		<xsl:variable name="fixture" select="$fixtures[@name = 'QueryString']" />
+		<func:result select="$fixture/item[@key = $key]" />
 	</func:function>
 	
 	<!-- ===========================================================
-	Stub for IsLoggedOn()
+	Mock for RequestServerVariables()
+	============================================================ -->
+	<func:function name="umb:RequestServerVariables">
+		<xsl:param name="key" />
+		<xsl:variable name="fixture" select="$fixtures[@name = 'ServerVariables']" />
+		<func:result select="$fixture/item[@key = $key]" />
+	</func:function>
+	
+	<!-- ===========================================================
+	Mock for IsLoggedOn()
 	============================================================ -->
 	<func:function name="umb:IsLoggedOn">
+		<xsl:variable name="fixture" select="$fixtures[@name = 'Access']" />
+		<func:result select="boolean($fixture/isLoggedOn = 'true')" />
 	</func:function>
 	
 	<!-- ===========================================================
