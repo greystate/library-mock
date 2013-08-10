@@ -67,7 +67,13 @@
 		logged in as a member.
 	-->
 	<fixture name="Access">
-		<hasAccess>true</hasAccess>
+		<!-- Add as many as you need like this one: -->
+		<!-- <hasAccess id="1200" path="-1,1080,1200">false</hasAccess> -->
+		
+		<!-- Keep this as the last one  -->
+		<hasAccess id="*" path="*">true</hasAccess>
+
+		<!-- Only need one of these -->
 		<isLoggedOn>false</isLoggedOn>
 	</fixture>
 	

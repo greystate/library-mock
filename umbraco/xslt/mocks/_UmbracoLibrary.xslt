@@ -134,11 +134,14 @@
 	</func:function>
 	
 	<!-- ===========================================================
-	Stub for HasAccess(nodeId, nodePath)
+	Mock for HasAccess(nodeId, nodePath)
 	============================================================ -->
 	<func:function name="umb:HasAccess">
 		<xsl:param name="nodeId" />
 		<xsl:param name="nodePath" />
+		<xsl:variable name="fixture" select="$fixtures[@name = 'Access']/hasAccess" />
+		<xsl:variable name="accessInfo" select="($fixture[@id = $nodeId][@path = $nodePath] | $fixture[last()])[1]" />
+		<func:result select="boolean($accessInfo = 'true')" />
 	</func:function>
 	
 	<!-- ===========================================================

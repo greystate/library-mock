@@ -29,7 +29,7 @@ library function, or just makes sure to return something that [looks like a duck
 - [x] `RequestQueryString()`
 - [x] `RequestServerVariables()`
 - [x] `IsLoggedOn()`
-- [ ] `HasAccess()`
+- [x] `HasAccess()`
 - [x] `DateGreaterThanOrEqualToday()`
 - [x] `DateGreaterThanOrEqual()`
 

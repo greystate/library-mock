@@ -40,6 +40,7 @@
 		<xsl:call-template name="DateGreaterThanOrEqualSample" />
 		<xsl:call-template name="SplitSample" /> 
 		<xsl:call-template name="GetMediaSample" />
+		<xsl:call-template name="HasAccessSample" />
 		
 		<h2>uComponents Samples</h2>
 		<xsl:call-template name="RandomChildNodeSample" />
@@ -100,6 +101,21 @@
 				<code><xsl:value-of select="ucom.xml:RandomChildNode($parent)/@id" /></code>
 			</p>
 		</section>
+	</xsl:template>
+	
+	<xsl:template name="HasAccessSample">
+		<xsl:call-template name="SampleHeader">
+			<xsl:with-param name="function" select="'HasAccess'" />
+		</xsl:call-template>
+		
+		<p>
+			By default we have access, so should be 'true':
+			<strong><xsl:value-of select="umb:HasAccess(1200, '-1,1300,4500,1200')" /></strong>
+		</p>
+		<p>
+			Trying the sample protected one from the fixture should yield 'false':
+			<strong><xsl:value-of select="umb:HasAccess(1200, '-1,1080,1200')" /></strong>
+		</p>
 	</xsl:template>
 
 	<xsl:template name="DateGreaterThanOrEqualTodaySample">
