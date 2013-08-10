@@ -16,7 +16,7 @@ library function, or just makes sure to return something that [looks like a duck
 ### From *umbraco.library*
 
 <!-- #tminclude "/Users/chriz/Development/lib/tm-support/transform.rb"
-    #xml#="umbraco/xslt/_UmbracoLibrary.xslt"
+    #xml#="umbraco/xslt/mocks/_UmbracoLibrary.xslt"
     #xslt#="lib/MocksList.xslt" -->
 
 - [x] `NiceUrl()`
@@ -26,8 +26,9 @@ library function, or just makes sure to return something that [looks like a duck
 - [x] `CurrentDate()`
 - [x] `Split()`
 - [ ] `Replace()`
-- [ ] `RequestQueryString()`
-- [ ] `IsLoggedOn()`
+- [x] `RequestQueryString()`
+- [x] `RequestServerVariables()`
+- [x] `IsLoggedOn()`
 - [ ] `HasAccess()`
 - [x] `DateGreaterThanOrEqualToday()`
 - [x] `DateGreaterThanOrEqual()`
@@ -37,11 +38,11 @@ library function, or just makes sure to return something that [looks like a duck
 ### From _ucomponents.*_
 
 <!-- #tminclude "/Users/chriz/Development/lib/tm-support/transform.rb"
-    #xml#="umbraco/xslt/_uComponentsExtensions.xslt"
+    #xml#="umbraco/xslt/mocks/_uComponentsExtensions.xslt"
     #xslt#="lib/MocksList.xslt" -->
 
 - [x] `RandomChildNode()` (xml)
-- [ ] `GetRandomNumbersAsXml()` (rnd)
+- [ ] `GetRandomNumbersAsXml()` (random)
 
 <!-- end tminclude -->
 
