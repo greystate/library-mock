@@ -22,6 +22,8 @@
 	xmlns:dates="http://exslt.org/dates-and-times"
 	xmlns:str="http://exslt.org/strings"
 	xmlns:make="http://exslt.org/common"
+	xmlns:dotnetstr="urn:Exslt.ExsltStrings"
+	xmlns:msxslmake="urn:schemas-microsoft-com:xslt"
 	exclude-result-prefixes="func umb dates make"
 	extension-element-prefixes="func"
 >
@@ -160,6 +162,30 @@
 		<xsl:param name="firstDate" />
 		<xsl:param name="secondDate" />
 		<func:result select="dates:seconds(dates:difference($secondDate, $firstDate)) &gt;= 0" />
+	</func:function>
+	
+<!--
+	## Miscellaneous extras
+	
+	We may need these (e.g. when using [some of these helpers][HELPERS])
+	
+	[HELPERS]: https://github.com/greystate/Greystate-XSLT-Helpers#readme
+-->
+	<!-- ===========================================================
+	Mock for MSXML's node-set()
+	============================================================ -->
+	<func:function name="msxslmake:node-set">
+		<xsl:param name="result-tree-fragment" />
+		<func:result select="make:node-set($result-tree-fragment)" />
+	</func:function>
+	
+	<!-- ===========================================================
+	Mock for Exslt.NET's split()
+	============================================================ -->
+	<func:function name="dotnetstr:split">
+		<xsl:param name="string" />
+		<xsl:param name="char" />
+		<func:result select="str:split($string, $char)" />
 	</func:function>
 
 </xsl:stylesheet>
