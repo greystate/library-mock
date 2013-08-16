@@ -19,19 +19,19 @@ library function, or just makes sure to return something that [looks like a duck
     #xml#="umbraco/xslt/mocks/_UmbracoLibrary.xslt"
     #xslt#="lib/MocksList.xslt" -->
 
-- [x] `NiceUrl()`
-- [x] `GetXmlNodeById()`
-- [x] `GetMedia()`
-- [x] `FormatDateTime()`
 - [x] `CurrentDate()`
-- [x] `Split()`
+- [x] `DateGreaterThanOrEqual()`
+- [x] `DateGreaterThanOrEqualToday()`
+- [x] `FormatDateTime()`
+- [x] `GetMedia()`
+- [x] `GetXmlNodeById()`
+- [x] `HasAccess()`
+- [x] `IsLoggedOn()`
+- [x] `NiceUrl()`
 - [ ] `Replace()`
 - [x] `RequestQueryString()`
 - [x] `RequestServerVariables()`
-- [x] `IsLoggedOn()`
-- [x] `HasAccess()`
-- [x] `DateGreaterThanOrEqualToday()`
-- [x] `DateGreaterThanOrEqual()`
+- [x] `Split()`
 
 <!-- end tminclude -->
 
@@ -41,8 +41,8 @@ library function, or just makes sure to return something that [looks like a duck
     #xml#="umbraco/xslt/mocks/_uComponentsExtensions.xslt"
     #xslt#="lib/MocksList.xslt" -->
 
-- [x] `RandomChildNode()` (xml)
 - [ ] `GetRandomNumbersAsXml()` (random)
+- [x] `RandomChildNode()` (xml)
 
 <!-- end tminclude -->
 
@@ -51,6 +51,10 @@ library function, or just makes sure to return something that [looks like a duck
 Here is the [reference for the umbraco.library functions][REF] on **Our Umbraco.**
 
 Here is the [reference for the uComponents Extensions][UCOMREF] on **ucomponents.org**
+
+## Installing
+
+To install these, just copy the `mocks` folder into your `xslt` folder
 
 ## Would this be useful as a submodule?
 

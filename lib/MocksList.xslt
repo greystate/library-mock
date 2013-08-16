@@ -15,7 +15,9 @@
 	<xsl:template match="/">
 		<xsl:text>&newline;</xsl:text>
 		
-		<xsl:apply-templates select="xsl:stylesheet/func:function" />
+		<xsl:apply-templates select="xsl:stylesheet/func:function">
+			<xsl:sort select="@name" data-type="text" order="ascending" />
+		</xsl:apply-templates>
 		
 		<xsl:text>&newline;</xsl:text>
 	</xsl:template>
@@ -31,5 +33,8 @@
 		</xsl:if>
 		<xsl:text>&newline;</xsl:text>
 	</xsl:template>
+
+	<!-- Suppress these special mocks from listing -->
+	<xsl:template match="func:function[contains('msxslmake|dotnetstr', substring-before(@name, ':'))]" />
 	
 </xsl:stylesheet>
