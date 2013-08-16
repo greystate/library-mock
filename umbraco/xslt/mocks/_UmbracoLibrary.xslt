@@ -24,7 +24,7 @@
 	xmlns:make="http://exslt.org/common"
 	xmlns:dotnetstr="urn:Exslt.ExsltStrings"
 	xmlns:msxslmake="urn:schemas-microsoft-com:xslt"
-	exclude-result-prefixes="func umb dates make"
+	exclude-result-prefixes="func umb dates str make dotnetstr msxslmake"
 	extension-element-prefixes="func"
 >
 
