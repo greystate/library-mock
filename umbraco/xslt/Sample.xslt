@@ -38,6 +38,7 @@
 		<xsl:call-template name="CurrentDateSample" />
 		<xsl:call-template name="DateGreaterThanOrEqualTodaySample" />
 		<xsl:call-template name="DateGreaterThanOrEqualSample" />
+		<xsl:call-template name="DateAddSample" />
 		<xsl:call-template name="SplitSample" /> 
 		<xsl:call-template name="GetMediaSample" />
 		<xsl:call-template name="HasAccessSample" />
@@ -139,6 +140,19 @@
 			<p>Is my birthday (1970-12-28) greater than January 1st the year after? — <strong><xsl:value-of select="umb:DateGreaterThanOrEqual('1970-12-28', '1971-01-01')" /></strong></p>
 			<p>Is May 4th, 1977 greater than (or equal to) May 4th 1977? <strong><xsl:value-of select="umb:DateGreaterThanOrEqual('1977-05-04', '1977-05-04')" /></strong></p>
 			<p>Is July 1st 2013 greater than July 1st 2012? - <strong><xsl:value-of select="umb:DateGreaterThanOrEqual('2013-07-01', '2012-07-01')" /></strong></p>
+		</section>
+	</xsl:template>
+	
+	<xsl:template name="DateAddSample">
+		<xsl:variable name="today" select="substring-before(umb:CurrentDate(), 'T')" />
+		<section class="sample">
+			<xsl:call-template name="SampleHeader">
+				<xsl:with-param name="function" select="'DateAdd'" />
+			</xsl:call-template>
+			
+			<p>My 50th birthday is: <strong><xsl:value-of select="umb:DateAdd('1970-12-28', 'y', 50)" /></strong></p>
+			<p>Tomorrow is: <strong><xsl:value-of select="umb:DateAdd($today, 'd', 1)" /></strong></p>
+			<p>Yesterday was: <strong><xsl:value-of select="umb:DateAdd($today, 'h', -24)" /></strong></p>
 		</section>
 	</xsl:template>
 	

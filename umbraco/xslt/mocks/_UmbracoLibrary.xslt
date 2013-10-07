@@ -166,6 +166,23 @@
 		<func:result select="dates:seconds(dates:difference($secondDate, $firstDate)) &gt;= 0" />
 	</func:function>
 	
+	<!-- ===========================================================
+	Mock for DateAdd()
+	============================================================ -->
+	<func:function name="umb:DateAdd">
+		<xsl:param name="date" />
+		<xsl:param name="type" />
+		<xsl:param name="offset" />
+		<xsl:variable name="duration">
+			<xsl:if test="starts-with($offset, '-')">-</xsl:if>
+			<xsl:text>P</xsl:text>
+			<xsl:if test="contains('hsHS', $type)">T</xsl:if>
+			<xsl:value-of select="translate($offset, '-', '')" />
+			<xsl:value-of select="translate($type, 'ymdhs', 'YMDHS')" />
+		</xsl:variable>
+		<func:result select="concat(dates:add($date, $duration), ' :: ', $duration)" />
+	</func:function>
+	
 <!--
 	## Miscellaneous extras
 	
