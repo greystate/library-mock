@@ -35,9 +35,10 @@
 	============================================================ -->
 	<func:function name="umb:NiceUrl">
 		<xsl:param name="nodeId" />
+		<xsl:variable name="node" select="//*[@id = $nodeId]" />
 		<func:result>
 			<xsl:text>/</xsl:text>
-			<xsl:for-each select="ancestor-or-self::*[@isDoc][not(parent::root)]">
+			<xsl:for-each select="$node/ancestor-or-self::*[@isDoc][not(parent::root)]">
 				<xsl:value-of select="concat(@urlName, '/')" />
 			</xsl:for-each>
 		</func:result>
