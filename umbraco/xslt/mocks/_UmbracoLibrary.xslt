@@ -180,7 +180,7 @@
 			<xsl:value-of select="translate($offset, '-', '')" />
 			<xsl:value-of select="translate($type, 'ymdhs', 'YMDHS')" />
 		</xsl:variable>
-		<func:result select="concat(dates:add($date, $duration), ' :: ', $duration)" />
+		<func:result select="dates:add($date, $duration)" />
 	</func:function>
 	
 <!--
