@@ -24,7 +24,8 @@
 	xmlns:make="http://exslt.org/common"
 	xmlns:dotnetstr="urn:Exslt.ExsltStrings"
 	xmlns:msxslmake="urn:schemas-microsoft-com:xslt"
-	exclude-result-prefixes="func umb dates str make dotnetstr msxslmake"
+	xmlns:cropup="urn:Eksponent.CropUp"
+	exclude-result-prefixes="func umb dates str make dotnetstr msxslmake cropup"
 	extension-element-prefixes="func"
 >
 
@@ -187,6 +188,15 @@
 		<xsl:param name="string" />
 		<xsl:param name="char" />
 		<func:result select="str:split($string, $char)" />
+	</func:function>
+	
+	<!-- ===========================================================
+	Mock for CropUp's UrlByMediaId()
+	============================================================ -->
+	<func:function name="cropup:UrlByMediaId">
+		<xsl:param name="nodeId" />
+		<xsl:param name="args" />
+		<func:result select="umbracoFile" />
 	</func:function>
 
 </xsl:stylesheet>
