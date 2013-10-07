@@ -20,6 +20,7 @@ library function, or just makes sure to return something that [looks like a duck
     #xslt#="lib/MocksList.xslt" -->
 
 - [x] `CurrentDate()`
+- [x] `DateAdd()`
 - [x] `DateGreaterThanOrEqual()`
 - [x] `DateGreaterThanOrEqualToday()`
 - [x] `FormatDateTime()`

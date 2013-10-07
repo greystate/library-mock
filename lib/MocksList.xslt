@@ -35,6 +35,6 @@
 	</xsl:template>
 
 	<!-- Suppress these special mocks from listing -->
-	<xsl:template match="func:function[contains('msxslmake|dotnetstr', substring-before(@name, ':'))]" />
+	<xsl:template match="func:function[contains('msxslmake|dotnetstr|cropup', substring-before(@name, ':'))]" />
 	
 </xsl:stylesheet>
