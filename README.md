@@ -55,20 +55,14 @@ Here is the [reference for the uComponents Extensions][UCOMREF] on **ucomponents
 
 ## Installing
 
-To install these, just copy the `mocks` folder into your `xslt` folder
+To install these, just copy the `mocks` folder into your `xslt` folder *OR...* you can use this super-handy link to get a couple of nifty Terminal commands (who doesn't love those?):
 
-## Would this be useful as a submodule?
-
-If I can somehow figure out how to use this as a [git submodule][SUBMODULE] and it makes sense, I'll be
-sure to write some instructions here:
-
-*(This space available for description)*
+[greystate.dk/resources/subtree-merge](http://greystate.dk/resources/subtree-merge/?rf=umbraco/xslt/mocks&u=greystate&b=master&r=library-mock&lf=umbraco/xslt/mocks)
 
 
 
 [UMBRACO]: https://github.com/umbraco/Umbraco-CMS
 [EXSLTFUNC]: http://exslt.org/func/
 [DUCK]: http://en.wikipedia.org/wiki/Duck_test
-[SUBMODULE]: http://git-scm.com/book/en/Git-Tools-Submodules
 [REF]: http://our.umbraco.org/wiki/reference/umbracolibrary/
 [UCOMREF]: http://ucomponents.org/xslt-extensions/
