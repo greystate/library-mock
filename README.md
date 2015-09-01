@@ -57,7 +57,8 @@ Here is the [reference for the uComponents Extensions][UCOMREF] on **ucomponents
 
 To install these, just copy the `mocks` folder into your `xslt` folder *OR...* you can use this super-handy link to get a couple of nifty Terminal commands (who doesn't love those?):
 
-[greystate.dk/resources/subtree-merge](http://greystate.dk/resources/subtree-merge/?rf=umbraco/xslt/mocks&u=greystate&b=master&r=library-mock&lf=umbraco/xslt/mocks)
+[greystate.dk/resources/subtree-merge][SUBTREEMERGE]
+
 
 
 
@@ -66,3 +67,4 @@ To install these, just copy the `mocks` folder into your `xslt` folder *OR...* y
 [DUCK]: http://en.wikipedia.org/wiki/Duck_test
 [REF]: http://our.umbraco.org/wiki/reference/umbracolibrary/
 [UCOMREF]: http://ucomponents.org/xslt-extensions/
+[SUBTREEMERGE]: http://greystate.dk/resources/subtree-merge/?rf=umbraco/xslt/mocks&u=greystate&b=master&r=library-mock&lf=umbraco/xslt/mocks
